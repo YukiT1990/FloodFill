@@ -28,10 +28,6 @@ func bridges() {
         let row: [Int] = readLine()!.split(separator: " ").map { Int($0)! }
         map.append(row)
     }
-    // check the contents of map
-    for i in 0..<N {
-        print(map[i])
-    }
     
     func createColoredMap(square: Square, id: Int) {
         let q = Queue<Square>()
@@ -67,13 +63,7 @@ func bridges() {
         }
     }
     
-    // check the contents of coloredMap
-    print("colored map")
-    for i in 0..<N {
-        print(coloredMap[i])
-    }
-    
-    func bridgeLength(square: Square) -> Int {
+    func bridgeLength(square: Square) {
         let q = Queue<Square>()
         q.enqueue(item: square)
         let islandID = coloredMap[square.y][square.x]
@@ -119,18 +109,15 @@ func bridges() {
                 }
             }
         }
-        return shortestLength
     }
-    
     
     for y in 0..<N {
         for x in 0..<N {
             if coloredMap[y][x] != 0 {
-                print(bridgeLength(square: Square(x: x, y: y, length: 0)))
+                bridgeLength(square: Square(x: x, y: y, length: 0))
             }
         }
     }
-    print("Output")
     print(finalBridgeLength)
 }
 
