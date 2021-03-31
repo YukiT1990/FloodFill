@@ -8,7 +8,7 @@
 import Foundation
 
 // Tomato Farm
-//tomatos()
+tomatos()
 
 /*
  Sample Input1
