@@ -8,6 +8,7 @@
 import Foundation
 
 // Tomato Farm
+print("Please input for Tomato Farm")
 tomatos()
 
 /*
@@ -54,7 +55,7 @@ tomatos()
 
  */
 
-
+print("Please input for Bridges")
 bridges()
 
 /*
